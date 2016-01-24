@@ -50,7 +50,7 @@
 #define ARCHER_C7_GPIO_LED_USB1		18
 #define ARCHER_C7_GPIO_LED_USB2		19
 
-#define ARCHER_C7_GPIO_BTN_RFKILL	13
+#define ARCHER_C7_GPIO_BTN_RFKILL	23
 #define ARCHER_C7_GPIO_BTN_RESET	16
 
 #define ARCHER_C7_GPIO_USB1_POWER	22
@@ -119,6 +119,7 @@ static struct gpio_keys_button archer_c7_gpio_keys[] __initdata = {
 		.code		= KEY_RFKILL,
 		.debounce_interval = ARCHER_C7_KEYS_DEBOUNCE_INTERVAL,
 		.gpio		= ARCHER_C7_GPIO_BTN_RFKILL,
+    .active_low = 1,
 	},
 };
 
